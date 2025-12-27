@@ -1,0 +1,12 @@
+.phone-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.phone-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

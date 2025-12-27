@@ -1,0 +1,52 @@
+@import url('./variables.css');
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  background: none;
+  border: none;
+}

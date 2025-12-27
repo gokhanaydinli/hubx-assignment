@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --color-primary: #007aff;
+  --color-text-primary: #1e1e1e;
+  --color-text-secondary: #667085;
+  --color-text-heading: #0b172a;
+  --color-background: #fafafa;
+  --color-white: #fff;
+  --color-border: #e5e7eb;
+  --color-primary-light: rgb(3 129 255 / 8%);
+  --color-overlay-light: rgb(0 0 0 / 8%);
+  --color-black: #000;
+
+  /* Typography */
+  --font-family: 'SF Pro Display', ui-sans-serif, system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* Border Radius */
+  --radius-md: 0.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-normal: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
