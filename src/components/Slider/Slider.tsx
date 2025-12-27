@@ -63,8 +63,10 @@ export function Slider() {
                 <PhoneMockup
                   imageSrcMobile={currentSlide.phoneImageMobile}
                   imageSrcDesktop={currentSlide.phoneImageDesktop}
-                  leftBarSrc={currentSlide.leftBarImage}
-                  rightBarSrc={currentSlide.rightBarImage}
+                  {...(currentSlide.leftBarImage && { leftBarSrc: currentSlide.leftBarImage })}
+                  {...(currentSlide.rightBarImage && { rightBarSrc: currentSlide.rightBarImage })}
+                  {...(currentSlide.signatureStampImage && { signatureStampSrc: currentSlide.signatureStampImage })}
+                  {...(currentSlide.completedImage && { completedSrc: currentSlide.completedImage })}
                   altText={currentSlide.title}
                   animationKey={activeIndex}
                 />

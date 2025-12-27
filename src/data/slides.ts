@@ -23,6 +23,8 @@ const rawSlides = [
       'Draw, scan or import your signature and stamp with a simple touch. Sign and stamp any document with just a single tap!',
     phoneImageMobile: images.phoneOneTapMobile,
     phoneImageDesktop: images.phoneOneTapDesktop,
+    signatureStampImage: images.signatureStamp,
+    completedImage: images.completedImage,
     tabIcon: icons.signStampIcon,
     tabLabel: 'Sign & Stamp',
     buttonLink: 'https://hubx.co/',

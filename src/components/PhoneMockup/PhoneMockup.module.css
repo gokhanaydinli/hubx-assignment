@@ -8,16 +8,38 @@
 .left-bar,
 .right-bar {
   top: 60%;
+  transform: translateY(-50%);
+
   display: block;
+
   width: auto;
   height: 70%;
-  transform: translateY(-50%);
 }
 
 .left-bar {
-  left: 12%;
+  left: 14%;
 }
 
 .right-bar {
-  right: 12%;
+  right: 14%;
+}
+
+.signature-stamp {
+  bottom: 15%;
+  left: 0;
+
+  display: block;
+
+  width: auto;
+  max-width: 40%;
+}
+
+.completed-image {
+  top: 32%;
+  right: 0%;
+
+  display: block;
+
+  width: auto;
+  max-width: 35%;
 }

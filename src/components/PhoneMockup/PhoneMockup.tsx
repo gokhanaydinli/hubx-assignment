@@ -6,6 +6,8 @@ interface PhoneMockupProps {
   imageSrcDesktop: string;
   leftBarSrc?: string;
   rightBarSrc?: string;
+  signatureStampSrc?: string;
+  completedSrc?: string;
   altText: string;
   animationKey: string | number;
 }
@@ -15,6 +17,8 @@ export function PhoneMockup({
   imageSrcDesktop,
   leftBarSrc,
   rightBarSrc,
+  signatureStampSrc,
+  completedSrc,
   altText,
   animationKey,
 }: PhoneMockupProps) {
@@ -56,6 +60,36 @@ export function PhoneMockup({
           src={rightBarSrc}
           alt=""
           className={`absolute ${styles['right-bar']}`}
+        />
+      )}
+      {signatureStampSrc && (
+        <motion.img
+          key={`signature-${animationKey}`}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.6,
+            ease: [0.34, 1.56, 0.64, 1],
+            delay: 1.4,
+          }}
+          src={signatureStampSrc}
+          alt=""
+          className={`absolute ${styles['signature-stamp']}`}
+        />
+      )}
+      {completedSrc && (
+        <motion.img
+          key={`completed-${animationKey}`}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.6,
+            ease: [0.34, 1.56, 0.64, 1],
+            delay: 1.8,
+          }}
+          src={completedSrc}
+          alt=""
+          className={`absolute ${styles['completed-image']}`}
         />
       )}
     </div>

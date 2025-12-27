@@ -7,6 +7,8 @@ export interface SlideData {
   phoneImageDesktop: string;
   leftBarImage?: string;
   rightBarImage?: string;
+  signatureStampImage?: string;
+  completedImage?: string;
   tabIcon: string;
   tabLabel: string;
   buttonLink: string;

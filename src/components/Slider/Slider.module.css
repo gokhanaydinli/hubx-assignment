@@ -41,8 +41,10 @@
 .tab-wrapper {
   position: relative;
   z-index: 10;
+
   margin-right: calc(var(--spacing-4) * -1);
   margin-left: calc(var(--spacing-4) * -1);
+
   background-color: var(--color-background);
 }
 
@@ -66,7 +68,7 @@
     align-items: center;
     justify-content: space-between;
 
-    max-width: 1400px;
+    max-width: 1450px;
     padding: 0 64px;
   }
 
@@ -93,7 +95,7 @@
     order: 1;
 
     aspect-ratio: unset;
-    min-height: 510px;
+    min-height: 485px;
     padding-left: 64px;
   }
 
