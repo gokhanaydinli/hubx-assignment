@@ -129,7 +129,11 @@
     display: flex;
     justify-content: center;
     max-width: 1600px;
-    padding: 0 64px 64px;
+  }
+
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  .tab-swiper :global .swiper-wrapper {
+    justify-content: center;
   }
 
   .tab-item.active {

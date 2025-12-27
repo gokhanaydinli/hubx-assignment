@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
 import styles from './TabNavigation.module.css';
 import { SlideData } from '../../types';
 import { TAB_SLIDER_CONFIG } from '../../constants';
@@ -16,10 +18,19 @@ export function TabNavigation({
   activeIndex,
   onTabClick,
 }: TabNavigationProps) {
+  const [tabSwiper, setTabSwiper] = useState<SwiperType | null>(null);
+
+  useEffect(() => {
+    if (tabSwiper) {
+      tabSwiper.slideTo(activeIndex);
+    }
+  }, [activeIndex, tabSwiper]);
+
   return (
     <nav className={`w-full ${styles['tab-nav']}`}>
       <Swiper
         {...TAB_SLIDER_CONFIG}
+        onSwiper={setTabSwiper}
         className={`w-full ${styles['tab-swiper']}`}
       >
         {slides.map((slide, index) => (
