@@ -7,12 +7,13 @@ import { SlideContent } from '../SlideContent';
 import { PhoneMockup } from '../PhoneMockup';
 import { TabNavigation } from '../TabNavigation';
 import { slidesData } from '../../data/slides';
+import { INITIAL_SLIDE } from '../../constants';
 import styles from './Slider.module.css';
 
 import 'swiper/css';
 
 export function Slider() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(INITIAL_SLIDE);
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   const handleTabClick = (index: number) => {

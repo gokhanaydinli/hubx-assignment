@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './TabNavigation.module.css';
 import { SlideData } from '../../types';
+import { INITIAL_SLIDE } from '../../constants';
 
 import 'swiper/css';
 
@@ -23,9 +24,9 @@ export function TabNavigation({
         centeredSlides={true}
         centeredSlidesBounds={true}
         grabCursor={true}
-        initialSlide={0}
-        speed={800}
-        touchRatio={0.8}
+        initialSlide={INITIAL_SLIDE}
+        speed={300}
+        touchRatio={1}
         resistance={true}
         resistanceRatio={0.5}
         className={styles['tab-swiper']}

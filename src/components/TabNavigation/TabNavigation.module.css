@@ -57,8 +57,19 @@
   height: 56px;
 }
 
+.tab-item.active .icon-wrapper::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
 .icon-circle-bg {
   position: absolute;
+  z-index: 1;
   inset: 0;
 
   width: 56px;
@@ -71,6 +82,7 @@
 
 .icon-circle {
   position: absolute;
+  z-index: 1;
   inset: 0;
   transform: rotate(-90deg);
 
@@ -93,6 +105,7 @@
 
 .tab-icon {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -1,10 +1,10 @@
 import { SlideData } from '../types';
+import { SLIDE_COUNT } from '../constants';
 import * as icons from '../assets/icons';
 import * as images from '../assets/images';
 
-export const slidesData: SlideData[] = [
+const rawSlides = [
   {
-    id: 0,
     badge: 'DOCUMENT SCANNER',
     title: 'Scan with Ease',
     description:
@@ -15,7 +15,6 @@ export const slidesData: SlideData[] = [
     tabLabel: 'Document Scanner',
   },
   {
-    id: 1,
     badge: 'SIGN & STAMP',
     title: 'One-Tap Focus',
     description:
@@ -26,7 +25,6 @@ export const slidesData: SlideData[] = [
     tabLabel: 'Sign & Stamp',
   },
   {
-    id: 2,
     badge: 'BATCH SCANNING',
     title: 'Multiple Page Scan',
     description:
@@ -37,7 +35,6 @@ export const slidesData: SlideData[] = [
     tabLabel: 'Batch Scanning',
   },
   {
-    id: 3,
     badge: 'ADVANCED FILTERS',
     title: 'Unique Filters',
     description:
@@ -48,7 +45,6 @@ export const slidesData: SlideData[] = [
     tabLabel: 'Advanced Filters',
   },
   {
-    id: 4,
     badge: 'EXPORT & SHARE',
     title: 'All-Round Conversion',
     description: 'Export your scans as PDF,JPG,ZIP,TXT and Word.',
@@ -58,3 +54,14 @@ export const slidesData: SlideData[] = [
     tabLabel: 'Export & Share',
   },
 ];
+
+export const slidesData: SlideData[] = rawSlides.map((slide, index) => ({
+  ...slide,
+  id: index,
+}));
+
+if (slidesData.length !== SLIDE_COUNT) {
+  throw new Error(
+    `Expected ${SLIDE_COUNT} slides, but got ${slidesData.length}`,
+  );
+}
