@@ -7,7 +7,7 @@ import { SlideContent } from '../SlideContent';
 import { PhoneMockup } from '../PhoneMockup';
 import { TabNavigation } from '../TabNavigation';
 import { slidesData } from '../../data/slides';
-import { INITIAL_SLIDE } from '../../constants';
+import { INITIAL_SLIDE, MAIN_SLIDER_CONFIG } from '../../constants';
 import styles from './Slider.module.css';
 
 import 'swiper/css';
@@ -28,25 +28,27 @@ export function Slider() {
   const currentSlide = slidesData[activeIndex];
 
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <div className={styles['slide-inner']}>
-          <div className={styles['slide-content-area']}>
+    <section className={`overflow-hidden flex flex-col justify-center ${styles.section}`}>
+      <div className={`relative flex flex-col w-full ${styles.container}`}>
+        <div className={`flex justify-center w-full ${styles['slide-inner']}`}>
+          <div className={`flex flex-col w-full ${styles['slide-content-area']}`}>
             <motion.div
               key={`content-${activeIndex}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
-              className={styles['content-wrapper']}
+              className={`flex-center ${styles['content-wrapper']}`}
             >
               <SlideContent
                 badge={currentSlide.badge}
                 title={currentSlide.title}
                 description={currentSlide.description}
+                buttonLink={currentSlide.buttonLink}
+                {...(currentSlide.buttonText && { buttonText: currentSlide.buttonText })}
               />
             </motion.div>
 
-            <div className={styles['phone-container']}>
+            <div className={`relative overflow-hidden ${styles['phone-container']}`}>
               <motion.div
                 key={`phone-${activeIndex}`}
                 initial={{ opacity: 0, y: '100%' }}
@@ -56,19 +58,22 @@ export function Slider() {
                   ease: [0.4, 0, 0.2, 1],
                   delay: 0.8,
                 }}
-                className={styles['phone-wrapper']}
+                className={`absolute w-full ${styles['phone-wrapper']}`}
               >
                 <PhoneMockup
                   imageSrcMobile={currentSlide.phoneImageMobile}
                   imageSrcDesktop={currentSlide.phoneImageDesktop}
+                  leftBarSrc={currentSlide.leftBarImage}
+                  rightBarSrc={currentSlide.rightBarImage}
                   altText={currentSlide.title}
+                  animationKey={activeIndex}
                 />
               </motion.div>
             </div>
           </div>
         </div>
 
-        <div className={styles['tab-wrapper']}>
+        <div className={`relative ${styles['tab-wrapper']}`}>
           <TabNavigation
             slides={slidesData}
             activeIndex={activeIndex}
@@ -77,9 +82,9 @@ export function Slider() {
         </div>
 
         <Swiper
+          {...MAIN_SLIDER_CONFIG}
           onSwiper={setSwiperInstance}
           onSlideChange={handleSlideChange}
-          slidesPerView={1}
           className={styles['swiper-hidden']}
         >
           {slidesData.map((slide) => (

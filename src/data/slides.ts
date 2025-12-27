@@ -13,6 +13,8 @@ const rawSlides = [
     phoneImageDesktop: images.phoneDocumentScannerDesktop,
     tabIcon: icons.documentScannerIcon,
     tabLabel: 'Document Scanner',
+    buttonLink: 'https://hubx.co/',
+    buttonText: 'Learn More',
   },
   {
     badge: 'SIGN & STAMP',
@@ -23,6 +25,8 @@ const rawSlides = [
     phoneImageDesktop: images.phoneOneTapDesktop,
     tabIcon: icons.signStampIcon,
     tabLabel: 'Sign & Stamp',
+    buttonLink: 'https://hubx.co/',
+    buttonText: 'Learn More',
   },
   {
     badge: 'BATCH SCANNING',
@@ -33,6 +37,8 @@ const rawSlides = [
     phoneImageDesktop: images.phoneBatchScanningDesktop,
     tabIcon: icons.batchScanningIcon,
     tabLabel: 'Batch Scanning',
+    buttonLink: 'https://hubx.co/',
+    buttonText: 'Learn More',
   },
   {
     badge: 'ADVANCED FILTERS',
@@ -41,8 +47,12 @@ const rawSlides = [
       'Apply advanced filters and enhance quality with various custom made filters. Manually edit brightness and contrast by your own choice on the custom filters.',
     phoneImageMobile: images.phoneUniqueFiltersMobile,
     phoneImageDesktop: images.phoneUniqueFiltersDesktop,
+    leftBarImage: images.leftBar,
+    rightBarImage: images.rightBar,
     tabIcon: icons.advancedFiltersIcon,
     tabLabel: 'Advanced Filters',
+    buttonLink: 'https://hubx.co/',
+    buttonText: 'Learn More',
   },
   {
     badge: 'EXPORT & SHARE',
@@ -52,6 +62,8 @@ const rawSlides = [
     phoneImageDesktop: images.phoneExportShareDesktop,
     tabIcon: icons.exportShareIcon,
     tabLabel: 'Export & Share',
+    buttonLink: 'https://hubx.co/',
+    buttonText: 'Learn More',
   },
 ];
 

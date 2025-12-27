@@ -1,11 +1,5 @@
 .tab-nav {
-  width: 100%;
-  padding: 0;
-  padding-bottom: 64px;
-}
-
-.tab-swiper {
-  width: 100%;
+  padding: 0 0 64px;
 }
 
 .tab-slide {
@@ -15,10 +9,8 @@
 .tab-item {
   cursor: pointer;
 
-  display: flex;
   flex-shrink: 0;
   gap: 1rem;
-  align-items: center;
 
   padding: 32px 40px;
 
@@ -51,7 +43,6 @@
 }
 
 .icon-wrapper {
-  position: relative;
   flex-shrink: 0;
   width: 56px;
   height: 56px;
@@ -68,7 +59,6 @@
 }
 
 .icon-circle-bg {
-  position: absolute;
   z-index: 1;
   inset: 0;
 
@@ -81,7 +71,6 @@
 }
 
 .icon-circle {
-  position: absolute;
   z-index: 1;
   inset: 0;
   transform: rotate(-90deg);
@@ -104,7 +93,6 @@
 }
 
 .tab-icon {
-  position: absolute;
   z-index: 2;
   top: 50%;
   left: 50%;
@@ -120,10 +108,7 @@
 }
 
 .tab-label {
-  font-family: var(--font-family);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
+  line-height: var(--line-height-normal);
   color: var(--color-black);
   letter-spacing: 0;
   white-space: nowrap;
@@ -145,10 +130,6 @@
     justify-content: center;
     max-width: 1600px;
     padding: 0 64px 64px;
-  }
-
-  .tab-swiper {
-    width: 100%;
   }
 
   .tab-item.active {

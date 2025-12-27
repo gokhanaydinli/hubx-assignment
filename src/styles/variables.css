@@ -13,6 +13,18 @@
 
   /* Typography */
   --font-family: 'SF Pro Display', ui-sans-serif, system-ui, sans-serif;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 32px;
+
+  /* Line heights */
+  --line-height-none: 0;
+  --line-height-tight: 100%;
+  --line-height-normal: 28px;
+  --line-height-relaxed: 32px;
+  --line-height-loose: 40px;
 
   /* Spacing */
   --spacing-4: 1rem;
@@ -27,4 +39,7 @@
 
   /* Transitions */
   --transition-normal: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Breakpoints */
+  --breakpoint-desktop: 1024px;
 }

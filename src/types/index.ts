@@ -5,6 +5,10 @@ export interface SlideData {
   description: string;
   phoneImageMobile: string;
   phoneImageDesktop: string;
+  leftBarImage?: string;
+  rightBarImage?: string;
   tabIcon: string;
   tabLabel: string;
+  buttonLink: string;
+  buttonText?: string;
 }

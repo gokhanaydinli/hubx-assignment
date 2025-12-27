@@ -1,12 +1,23 @@
 .phone-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
+  position: relative;
+  overflow: visible;
+  line-height: var(--line-height-none);
 }
 
-.phone-image {
+
+.left-bar,
+.right-bar {
+  top: 60%;
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 70%;
+  transform: translateY(-50%);
+}
+
+.left-bar {
+  left: 12%;
+}
+
+.right-bar {
+  right: 12%;
 }

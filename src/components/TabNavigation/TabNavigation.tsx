@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './TabNavigation.module.css';
 import { SlideData } from '../../types';
-import { INITIAL_SLIDE } from '../../constants';
+import { TAB_SLIDER_CONFIG } from '../../constants';
 
 import 'swiper/css';
 
@@ -17,40 +17,31 @@ export function TabNavigation({
   onTabClick,
 }: TabNavigationProps) {
   return (
-    <nav className={styles['tab-nav']}>
+    <nav className={`w-full ${styles['tab-nav']}`}>
       <Swiper
-        slidesPerView="auto"
-        spaceBetween={0}
-        centeredSlides={true}
-        centeredSlidesBounds={true}
-        grabCursor={true}
-        initialSlide={INITIAL_SLIDE}
-        speed={300}
-        touchRatio={1}
-        resistance={true}
-        resistanceRatio={0.5}
-        className={styles['tab-swiper']}
+        {...TAB_SLIDER_CONFIG}
+        className={`w-full ${styles['tab-swiper']}`}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.id} className={styles['tab-slide']}>
             <button
-              className={`${styles['tab-item']} ${activeIndex === index ? styles.active : ''}`}
+              className={`flex items-center ${styles['tab-item']} ${activeIndex === index ? styles.active : ''}`}
               onClick={() => onTabClick(index)}
             >
-              <div className={styles['icon-wrapper']}>
-                <svg className={styles['icon-circle-bg']} viewBox="0 0 56 56">
+              <div className={`relative ${styles['icon-wrapper']}`}>
+                <svg className={`absolute ${styles['icon-circle-bg']}`} viewBox="0 0 56 56">
                   <circle cx="28" cy="28" r="27" />
                 </svg>
-                <svg className={styles['icon-circle']} viewBox="0 0 56 56">
+                <svg className={`absolute ${styles['icon-circle']}`} viewBox="0 0 56 56">
                   <circle cx="28" cy="28" r="27" />
                 </svg>
                 <img
                   src={slide.tabIcon}
                   alt=""
-                  className={styles['tab-icon']}
+                  className={`absolute ${styles['tab-icon']}`}
                 />
               </div>
-              <span className={styles['tab-label']}>{slide.tabLabel}</span>
+              <span className={`text-lg font-medium ${styles['tab-label']}`}>{slide.tabLabel}</span>
             </button>
           </SwiperSlide>
         ))}
