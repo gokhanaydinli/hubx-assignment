@@ -3,7 +3,7 @@
 
   overflow: visible;
 
-  max-width: 375px;
+  max-width: 350px;
   margin: 0 auto;
 
   line-height: var(--line-height-none);
@@ -21,15 +21,15 @@
 }
 
 .left-bar {
-  left: 13%;
+  left: 10%;
 }
 
 .right-bar {
-  right: 13%;
+  right: 10%;
 }
 
 .signature-stamp {
-  bottom: 15%;
+  bottom: 20%;
   left: 0;
 
   display: block;
