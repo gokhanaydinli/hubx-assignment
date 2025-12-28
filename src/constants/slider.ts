@@ -6,7 +6,6 @@ export const INITIAL_SLIDE = 0;
 export const DEFAULT_BUTTON_LINK = 'https://hubx.co/';
 export const DEFAULT_BUTTON_TEXT = 'Learn More';
 
-// Slider Configurations
 export const MAIN_SLIDER_CONFIG: SwiperOptions = {
   slidesPerView: 1,
   speed: 0,
@@ -14,7 +13,7 @@ export const MAIN_SLIDER_CONFIG: SwiperOptions = {
 };
 
 export const TAB_SLIDER_CONFIG: SwiperOptions = {
-  slidesPerView: 'auto',
+  slidesPerView: 1.2,
   spaceBetween: 0,
   centeredSlides: true,
   centeredSlidesBounds: true,
@@ -27,4 +26,9 @@ export const TAB_SLIDER_CONFIG: SwiperOptions = {
   freeMode: false,
   longSwipesRatio: 0.3,
   longSwipesMs: 200,
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+    },
+  },
 };

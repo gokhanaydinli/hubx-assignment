@@ -3,15 +3,17 @@
 }
 
 .tab-slide {
-  width: auto !important;
+  width: auto;
 }
 
 .tab-item {
   cursor: pointer;
 
+  contain: layout;
   flex-shrink: 0;
   gap: 1rem;
 
+  width: 100%;
   padding: 32px 40px;
 
   color: var(--color-text-secondary);
@@ -98,6 +100,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  aspect-ratio: 1 / 1;
   width: 32px;
   height: 32px;
 }
@@ -115,14 +118,6 @@
 }
 
 @media (width >= 1024px) {
-  .tab-slide {
-    width: 20% !important;
-  }
-
-  .tab-item {
-    width: 100%;
-  }
-
   .tab-item:not(.active):hover {
     box-shadow:
       inset 0 0 0 3px var(--color-primary),

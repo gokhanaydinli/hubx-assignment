@@ -55,6 +55,10 @@ export function TabNavigation({
                 <img
                   src={slide.tabIcon}
                   alt=""
+                  width="32"
+                  height="32"
+                  loading="eager"
+                  decoding="async"
                   className={`absolute ${styles['tab-icon']}`}
                 />
               </div>
