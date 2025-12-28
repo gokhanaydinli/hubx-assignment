@@ -93,8 +93,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
       {slideData.batchImage1 && (
         <motion.img
           key={`batch1-${animationKey}`}
-          initial={{ y: 400 }}
-          animate={{ y: 0 }}
+          initial={{ y: 400, rotateX: -15 }}
           transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
@@ -109,8 +108,8 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
       {slideData.batchImage2 && (
         <motion.img
           key={`batch2-${animationKey}`}
-          initial={{ y: 400 }}
-          animate={{ y: 0 }}
+          initial={{ y: 400, rotateX: -15 }}
+          animate={{ y: 0, rotateX: 0 }}
           transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
@@ -125,8 +124,8 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
       {slideData.batchImage3 && (
         <motion.img
           key={`batch3-${animationKey}`}
-          initial={{ y: 400 }}
-          animate={{ y: 0 }}
+          initial={{ y: 400, rotateX: -15 }}
+          animate={{ y: 0, rotateX: 0 }}
           transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
@@ -141,7 +140,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
       {slideData.exportPdfIcon && (
         <motion.img
           key={`export-pdf-${animationKey}`}
-          initial={{ y: 200, x: 300 }}
+          initial={{ y: 200, x: 1000 }}
           animate={{ y: 0, x: 0 }}
           transition={{
             duration: 0.5,
