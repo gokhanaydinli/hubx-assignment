@@ -18,7 +18,7 @@ export function AdvancedFiltersOverlay({
 }: AdvancedFiltersOverlayProps) {
   return (
     <>
-      {slideData.leftBarImage && (
+      {slideData.advancedFiltersLeftBar && (
         <motion.img
           key={`left-${animationKey}`}
           initial={{ opacity: 0 }}
@@ -29,12 +29,12 @@ export function AdvancedFiltersOverlay({
             delay: 0.4,
           }}
           style={gpuAcceleration}
-          src={slideData.leftBarImage}
+          src={slideData.advancedFiltersLeftBar}
           alt=""
           className={`absolute ${styles['left-bar']}`}
         />
       )}
-      {slideData.rightBarImage && (
+      {slideData.advancedFiltersRightBar && (
         <motion.img
           key={`right-${animationKey}`}
           initial={{ opacity: 0 }}
@@ -45,7 +45,7 @@ export function AdvancedFiltersOverlay({
             delay: 0.6,
           }}
           style={gpuAcceleration}
-          src={slideData.rightBarImage}
+          src={slideData.advancedFiltersRightBar}
           alt=""
           className={`absolute ${styles['right-bar']}`}
         />

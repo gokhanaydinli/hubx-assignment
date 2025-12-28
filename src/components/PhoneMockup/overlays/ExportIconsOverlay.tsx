@@ -18,7 +18,7 @@ export function ExportIconsOverlay({
 }: ExportIconsOverlayProps) {
   return (
     <>
-      {slideData.exportPdfIcon && (
+      {slideData.exportPdfPrimary && (
         <motion.img
           key={`export-pdf-${animationKey}`}
           initial={{ y: 200, x: 1000 }}
@@ -29,12 +29,12 @@ export function ExportIconsOverlay({
             delay: 0.4,
           }}
           style={gpuAcceleration}
-          src={slideData.exportPdfIcon}
+          src={slideData.exportPdfPrimary}
           alt=""
           className={`absolute ${styles['export-pdf']}`}
         />
       )}
-      {slideData.exportPdf2Icon && (
+      {slideData.exportPdfSecondary && (
         <motion.img
           key={`export-pdf2-${animationKey}`}
           initial={{ y: 200, x: 120 }}
@@ -45,12 +45,12 @@ export function ExportIconsOverlay({
             delay: 0.8,
           }}
           style={gpuAcceleration}
-          src={slideData.exportPdf2Icon}
+          src={slideData.exportPdfSecondary}
           alt=""
           className={`absolute ${styles['export-pdf2']}`}
         />
       )}
-      {slideData.exportJpgIcon && (
+      {slideData.exportJpg && (
         <motion.img
           key={`export-jpg-${animationKey}`}
           initial={{ y: 200, x: 10 }}
@@ -61,12 +61,12 @@ export function ExportIconsOverlay({
             delay: 1.0,
           }}
           style={gpuAcceleration}
-          src={slideData.exportJpgIcon}
+          src={slideData.exportJpg}
           alt=""
           className={`absolute ${styles['export-jpg']}`}
         />
       )}
-      {slideData.exportTxtIcon && (
+      {slideData.exportTxt && (
         <motion.img
           key={`export-txt-${animationKey}`}
           initial={{ y: 200, x: -90 }}
@@ -77,7 +77,7 @@ export function ExportIconsOverlay({
             delay: 1.2,
           }}
           style={gpuAcceleration}
-          src={slideData.exportTxtIcon}
+          src={slideData.exportTxt}
           alt=""
           className={`absolute ${styles['export-txt']}`}
         />

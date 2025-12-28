@@ -18,7 +18,7 @@ export function BatchScanOverlay({
 }: BatchScanOverlayProps) {
   return (
     <>
-      {slideData.batchImage1 && (
+      {slideData.batchScanFront && (
         <motion.img
           key={`batch1-${animationKey}`}
           initial={{ y: 400, rotateX: -15 }}
@@ -29,12 +29,12 @@ export function BatchScanOverlay({
             delay: 0.4,
           }}
           style={gpuAcceleration}
-          src={slideData.batchImage1}
+          src={slideData.batchScanFront}
           alt=""
           className={`absolute ${styles['batch-scan-1']}`}
         />
       )}
-      {slideData.batchImage2 && (
+      {slideData.batchScanMiddle && (
         <motion.img
           key={`batch2-${animationKey}`}
           initial={{ y: 400, rotateX: -15 }}
@@ -45,12 +45,12 @@ export function BatchScanOverlay({
             delay: 0.7,
           }}
           style={gpuAcceleration}
-          src={slideData.batchImage2}
+          src={slideData.batchScanMiddle}
           alt=""
           className={`absolute ${styles['batch-scan-2']}`}
         />
       )}
-      {slideData.batchImage3 && (
+      {slideData.batchScanBack && (
         <motion.img
           key={`batch3-${animationKey}`}
           initial={{ y: 400, rotateX: -15 }}
@@ -61,7 +61,7 @@ export function BatchScanOverlay({
             delay: 1,
           }}
           style={gpuAcceleration}
-          src={slideData.batchImage3}
+          src={slideData.batchScanBack}
           alt=""
           className={`absolute ${styles['batch-scan-3']}`}
         />

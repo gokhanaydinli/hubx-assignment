@@ -18,7 +18,7 @@ export function SignatureOverlay({
 }: SignatureOverlayProps) {
   return (
     <>
-      {slideData.signatureStampImage && (
+      {slideData.signatureStamp && (
         <motion.img
           key={`signature-${animationKey}`}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -29,12 +29,12 @@ export function SignatureOverlay({
             delay: 0.4,
           }}
           style={gpuAcceleration}
-          src={slideData.signatureStampImage}
+          src={slideData.signatureStamp}
           alt=""
           className={`absolute ${styles['signature-stamp']}`}
         />
       )}
-      {slideData.completedImage && (
+      {slideData.signatureCompleted && (
         <motion.img
           key={`completed-${animationKey}`}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -45,7 +45,7 @@ export function SignatureOverlay({
             delay: 0.8,
           }}
           style={gpuAcceleration}
-          src={slideData.completedImage}
+          src={slideData.signatureCompleted}
           alt=""
           className={`absolute ${styles['completed-image']}`}
         />
