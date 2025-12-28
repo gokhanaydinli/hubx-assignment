@@ -61,20 +61,7 @@ export function Slider() {
                 className={`absolute w-full ${styles['phone-wrapper']}`}
               >
                 <PhoneMockup
-                  imageSrcMobile={currentSlide.phoneImageMobile}
-                  imageSrcDesktop={currentSlide.phoneImageDesktop}
-                  {...(currentSlide.leftBarImage && { leftBarSrc: currentSlide.leftBarImage })}
-                  {...(currentSlide.rightBarImage && { rightBarSrc: currentSlide.rightBarImage })}
-                  {...(currentSlide.signatureStampImage && { signatureStampSrc: currentSlide.signatureStampImage })}
-                  {...(currentSlide.completedImage && { completedSrc: currentSlide.completedImage })}
-                  {...(currentSlide.batchImage1 && { batchScan1Src: currentSlide.batchImage1 })}
-                  {...(currentSlide.batchImage2 && { batchScan2Src: currentSlide.batchImage2 })}
-                  {...(currentSlide.batchImage3 && { batchScan3Src: currentSlide.batchImage3 })}
-                  {...(currentSlide.exportPdfIcon && { exportPdfSrc: currentSlide.exportPdfIcon })}
-                  {...(currentSlide.exportPdf2Icon && { exportPdf2Src: currentSlide.exportPdf2Icon })}
-                  {...(currentSlide.exportTxtIcon && { exportTxtSrc: currentSlide.exportTxtIcon })}
-                  {...(currentSlide.exportJpgIcon && { exportJpgSrc: currentSlide.exportJpgIcon })}
-                  altText={currentSlide.title}
+                  slideData={currentSlide}
                   animationKey={activeIndex}
                 />
               </motion.div>

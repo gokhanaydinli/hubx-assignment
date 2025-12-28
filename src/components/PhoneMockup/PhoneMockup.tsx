@@ -1,52 +1,27 @@
 import { motion } from 'motion/react';
 import styles from './PhoneMockup.module.css';
+import { SlideData } from '../../types';
 
 interface PhoneMockupProps {
-  imageSrcMobile: string;
-  imageSrcDesktop: string;
-  leftBarSrc?: string;
-  rightBarSrc?: string;
-  signatureStampSrc?: string;
-  completedSrc?: string;
-  batchScan1Src?: string;
-  batchScan2Src?: string;
-  batchScan3Src?: string;
-  exportPdfSrc?: string;
-  exportPdf2Src?: string;
-  exportTxtSrc?: string;
-  exportJpgSrc?: string;
-  altText: string;
+  slideData: SlideData;
   animationKey: string | number;
 }
 
 export function PhoneMockup({
-  imageSrcMobile,
-  imageSrcDesktop,
-  leftBarSrc,
-  rightBarSrc,
-  signatureStampSrc,
-  completedSrc,
-  batchScan1Src,
-  batchScan2Src,
-  batchScan3Src,
-  exportPdfSrc,
-  exportPdf2Src,
-  exportTxtSrc,
-  exportJpgSrc,
-  altText,
+  slideData,
   animationKey,
 }: PhoneMockupProps) {
   return (
     <div className={`flex-center ${styles['phone-wrapper']}`}>
       <picture>
-        <source media="(min-width: 1024px)" srcSet={imageSrcDesktop} />
+        <source media="(min-width: 1024px)" srcSet={slideData.phoneImageDesktop} />
         <img
-          src={imageSrcMobile}
-          alt={altText}
+          src={slideData.phoneImageMobile}
+          alt={slideData.title}
           className={`block w-full h-auto ${styles['phone-image']}`}
         />
       </picture>
-      {leftBarSrc && (
+      {slideData.leftBarImage && (
         <motion.img
           key={`left-${animationKey}`}
           initial={{ opacity: 0 }}
@@ -56,12 +31,12 @@ export function PhoneMockup({
             ease: [0.4, 0, 0.2, 1],
             delay: 1.4,
           }}
-          src={leftBarSrc}
+          src={slideData.leftBarImage}
           alt=""
           className={`absolute ${styles['left-bar']}`}
         />
       )}
-      {rightBarSrc && (
+      {slideData.rightBarImage && (
         <motion.img
           key={`right-${animationKey}`}
           initial={{ opacity: 0 }}
@@ -71,12 +46,12 @@ export function PhoneMockup({
             ease: [0.4, 0, 0.2, 1],
             delay: 1.6,
           }}
-          src={rightBarSrc}
+          src={slideData.rightBarImage}
           alt=""
           className={`absolute ${styles['right-bar']}`}
         />
       )}
-      {signatureStampSrc && (
+      {slideData.signatureStampImage && (
         <motion.img
           key={`signature-${animationKey}`}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -86,12 +61,12 @@ export function PhoneMockup({
             ease: [0.34, 1.56, 0.64, 1],
             delay: 1.4,
           }}
-          src={signatureStampSrc}
+          src={slideData.signatureStampImage}
           alt=""
           className={`absolute ${styles['signature-stamp']}`}
         />
       )}
-      {completedSrc && (
+      {slideData.completedImage && (
         <motion.img
           key={`completed-${animationKey}`}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -101,12 +76,12 @@ export function PhoneMockup({
             ease: [0.34, 1.56, 0.64, 1],
             delay: 1.8,
           }}
-          src={completedSrc}
+          src={slideData.completedImage}
           alt=""
           className={`absolute ${styles['completed-image']}`}
         />
       )}
-      {batchScan1Src && (
+      {slideData.batchImage1 && (
         <motion.img
           key={`batch1-${animationKey}`}
           initial={{ y: 400 }}
@@ -116,12 +91,12 @@ export function PhoneMockup({
             ease: [0.16, 1, 0.3, 1],
             delay: 1.4,
           }}
-          src={batchScan1Src}
+          src={slideData.batchImage1}
           alt=""
           className={`absolute ${styles['batch-scan-1']}`}
         />
       )}
-      {batchScan2Src && (
+      {slideData.batchImage2 && (
         <motion.img
           key={`batch2-${animationKey}`}
           initial={{ y: 400 }}
@@ -131,12 +106,12 @@ export function PhoneMockup({
             ease: [0.16, 1, 0.3, 1],
             delay: 2.0,
           }}
-          src={batchScan2Src}
+          src={slideData.batchImage2}
           alt=""
           className={`absolute ${styles['batch-scan-2']}`}
         />
       )}
-      {batchScan3Src && (
+      {slideData.batchImage3 && (
         <motion.img
           key={`batch3-${animationKey}`}
           initial={{ y: 400 }}
@@ -146,12 +121,12 @@ export function PhoneMockup({
             ease: [0.16, 1, 0.3, 1],
             delay: 2.6,
           }}
-          src={batchScan3Src}
+          src={slideData.batchImage3}
           alt=""
           className={`absolute ${styles['batch-scan-3']}`}
         />
       )}
-      {exportPdfSrc && (
+      {slideData.exportPdfIcon && (
         <motion.img
           key={`export-pdf-${animationKey}`}
           initial={{ y: 200, x: 300 }}
@@ -161,12 +136,12 @@ export function PhoneMockup({
             ease: [0.22, 1, 0.36, 1],
             delay: 1.4,
           }}
-          src={exportPdfSrc}
+          src={slideData.exportPdfIcon}
           alt=""
           className={`absolute ${styles['export-pdf']}`}
         />
       )}
-      {exportPdf2Src && (
+      {slideData.exportPdf2Icon && (
         <motion.img
           key={`export-pdf2-${animationKey}`}
           initial={{ y: 200, x: 120 }}
@@ -176,12 +151,12 @@ export function PhoneMockup({
             ease: [0.22, 1, 0.36, 1],
             delay: 1.8,
           }}
-          src={exportPdf2Src}
+          src={slideData.exportPdf2Icon}
           alt=""
           className={`absolute ${styles['export-pdf2']}`}
         />
       )}
-      {exportJpgSrc && (
+      {slideData.exportJpgIcon && (
         <motion.img
           key={`export-jpg-${animationKey}`}
           initial={{ y: 200, x: 10 }}
@@ -191,12 +166,12 @@ export function PhoneMockup({
             ease: [0.22, 1, 0.36, 1],
             delay: 2
           }}
-          src={exportJpgSrc}
+          src={slideData.exportJpgIcon}
           alt=""
           className={`absolute ${styles['export-jpg']}`}
         />
       )}
-      {exportTxtSrc && (
+      {slideData.exportTxtIcon && (
         <motion.img
           key={`export-txt-${animationKey}`}
           initial={{ y: 200, x: -90 }}
@@ -206,7 +181,7 @@ export function PhoneMockup({
             ease: [0.22, 1, 0.36, 1],
             delay: 2.2
           }}
-          src={exportTxtSrc}
+          src={slideData.exportTxtIcon}
           alt=""
           className={`absolute ${styles['export-txt']}`}
         />
