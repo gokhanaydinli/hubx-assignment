@@ -27,7 +27,13 @@ export const TAB_SLIDER_CONFIG: SwiperOptions = {
   longSwipesRatio: 0.3,
   longSwipesMs: 200,
   breakpoints: {
+    600: {
+      slidesPerView: 2,
+    },
     1024: {
+      slidesPerView: 3,
+    },
+    1180: {
       slidesPerView: 5,
     },
   },

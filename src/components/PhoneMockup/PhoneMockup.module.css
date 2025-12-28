@@ -2,6 +2,8 @@
   position: relative;
   overflow: visible;
   line-height: var(--line-height-none);
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .left-bar,
@@ -107,6 +109,10 @@
 }
 
 @media (width >= 1024px) {
+  .phone-wrapper {
+    max-width: unset;
+  }
+
   .signature-stamp {
     bottom: 18%;
     left: 3%;
