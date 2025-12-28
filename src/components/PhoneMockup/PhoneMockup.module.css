@@ -6,7 +6,7 @@
 
 .left-bar,
 .right-bar {
-  top: 60%;
+  top: 26%;
   transform: translateY(-50%);
 
   display: block;
@@ -16,11 +16,11 @@
 }
 
 .left-bar {
-  left: 14%;
+  left: 15%;
 }
 
 .right-bar {
-  right: 14%;
+  right: 15%;
 }
 
 .signature-stamp {
@@ -83,7 +83,7 @@
   display: block;
 
   width: auto;
-  max-width: 25%;
+  max-width: 23%;
 }
 
 .export-pdf {
@@ -93,11 +93,11 @@
 }
 
 .export-pdf2 {
-  left: 14%;
+  left: 15%;
 }
 
 .export-txt {
-  left: 60%;
+  left: 61%;
 }
 
 .export-jpg {
