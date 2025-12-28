@@ -16,10 +16,6 @@ Install dependencies:
 
 ```sh
 npm install
-npm install react react-dom
-npm install swiper
-npm install framer-motion
-npm install -D typescript vite
 ```
 
 Start development server:
