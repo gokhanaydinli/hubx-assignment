@@ -43,3 +43,95 @@
   width: auto;
   max-width: 35%;
 }
+
+.batch-scan-1,
+.batch-scan-2,
+.batch-scan-3 {
+  display: block;
+  width: auto;
+  left: 32%;
+  transform: translateX(-50%);
+}
+
+.batch-scan-1 {
+  top: 26%;
+  max-width: 41%;
+  z-index: 2;
+  left: 30%;
+}
+
+.batch-scan-2 {
+  top: 28%;
+  max-width: 50%;
+  z-index: 2;
+  left: 25%;
+}
+
+.batch-scan-3 {
+  top: 33%;
+  max-width: 56%;
+  z-index: 2;
+  left: 22%;
+}
+
+.export-pdf,
+.export-pdf2,
+.export-txt,
+.export-jpg {
+  display: block;
+  width: auto;
+  max-width: 25%;
+  bottom: 2%;
+  z-index: 2;
+}
+
+.export-pdf {
+  left: 13%;
+  bottom: 4%;
+  width: 4%;
+}
+
+.export-pdf2 {
+  left: 14%;
+}
+
+.export-txt {
+  left: 60%;
+}
+
+.export-jpg {
+  left: 37%;
+  bottom: 8%;
+  max-width: 23%;
+}
+
+@media (width >= 1024px) {
+  .batch-scan-1 {
+    top: 25%;
+    max-width: 41%;
+    z-index: 2;
+    left: 30%;
+  }
+
+  .batch-scan-2 {
+    top: 27%;
+    max-width: 49%;
+    z-index: 2;
+    left: 26%;
+  }
+
+  .batch-scan-3 {
+    top: 31%;
+    max-width: 60%;
+    z-index: 2;
+    left: 24%;
+  }
+
+  .export-pdf {
+    left: 13%;
+    bottom: 4%;
+  }
+}
+
+
+

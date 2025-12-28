@@ -8,6 +8,13 @@ interface PhoneMockupProps {
   rightBarSrc?: string;
   signatureStampSrc?: string;
   completedSrc?: string;
+  batchScan1Src?: string;
+  batchScan2Src?: string;
+  batchScan3Src?: string;
+  exportPdfSrc?: string;
+  exportPdf2Src?: string;
+  exportTxtSrc?: string;
+  exportJpgSrc?: string;
   altText: string;
   animationKey: string | number;
 }
@@ -19,6 +26,13 @@ export function PhoneMockup({
   rightBarSrc,
   signatureStampSrc,
   completedSrc,
+  batchScan1Src,
+  batchScan2Src,
+  batchScan3Src,
+  exportPdfSrc,
+  exportPdf2Src,
+  exportTxtSrc,
+  exportJpgSrc,
   altText,
   animationKey,
 }: PhoneMockupProps) {
@@ -90,6 +104,111 @@ export function PhoneMockup({
           src={completedSrc}
           alt=""
           className={`absolute ${styles['completed-image']}`}
+        />
+      )}
+      {batchScan1Src && (
+        <motion.img
+          key={`batch1-${animationKey}`}
+          initial={{ y: 400 }}
+          animate={{ y: 0 }}
+          transition={{
+            duration: 1.4,
+            ease: [0.16, 1, 0.3, 1],
+            delay: 1.4,
+          }}
+          src={batchScan1Src}
+          alt=""
+          className={`absolute ${styles['batch-scan-1']}`}
+        />
+      )}
+      {batchScan2Src && (
+        <motion.img
+          key={`batch2-${animationKey}`}
+          initial={{ y: 400 }}
+          animate={{ y: 0 }}
+          transition={{
+            duration: 1.4,
+            ease: [0.16, 1, 0.3, 1],
+            delay: 2.0,
+          }}
+          src={batchScan2Src}
+          alt=""
+          className={`absolute ${styles['batch-scan-2']}`}
+        />
+      )}
+      {batchScan3Src && (
+        <motion.img
+          key={`batch3-${animationKey}`}
+          initial={{ y: 400 }}
+          animate={{ y: 0 }}
+          transition={{
+            duration: 1.4,
+            ease: [0.16, 1, 0.3, 1],
+            delay: 2.6,
+          }}
+          src={batchScan3Src}
+          alt=""
+          className={`absolute ${styles['batch-scan-3']}`}
+        />
+      )}
+      {exportPdfSrc && (
+        <motion.img
+          key={`export-pdf-${animationKey}`}
+          initial={{ y: 200, x: 300 }}
+          animate={{ y: 0, x: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 1.4,
+          }}
+          src={exportPdfSrc}
+          alt=""
+          className={`absolute ${styles['export-pdf']}`}
+        />
+      )}
+      {exportPdf2Src && (
+        <motion.img
+          key={`export-pdf2-${animationKey}`}
+          initial={{ y: 200, x: 120 }}
+          animate={{ y: 0, x: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 1.8,
+          }}
+          src={exportPdf2Src}
+          alt=""
+          className={`absolute ${styles['export-pdf2']}`}
+        />
+      )}
+      {exportJpgSrc && (
+        <motion.img
+          key={`export-jpg-${animationKey}`}
+          initial={{ y: 200, x: 10 }}
+          animate={{ y: 0, x: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 2
+          }}
+          src={exportJpgSrc}
+          alt=""
+          className={`absolute ${styles['export-jpg']}`}
+        />
+      )}
+      {exportTxtSrc && (
+        <motion.img
+          key={`export-txt-${animationKey}`}
+          initial={{ y: 200, x: -90 }}
+          animate={{ y: 0, x: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 2.2
+          }}
+          src={exportTxtSrc}
+          alt=""
+          className={`absolute ${styles['export-txt']}`}
         />
       )}
     </div>
