@@ -48,38 +48,38 @@
   max-width: 35%;
 }
 
-.batch-scan-1,
-.batch-scan-2,
-.batch-scan-3 {
+.batch-scan-front,
+.batch-scan-middle,
+.batch-scan-back {
   left: 32%;
   transform: translateX(-50%);
   display: block;
   width: auto;
 }
 
-.batch-scan-1 {
+.batch-scan-front {
   z-index: 2;
   top: 27%;
   left: 30%;
   max-width: 41%;
 }
 
-.batch-scan-2 {
+.batch-scan-middle {
   z-index: 2;
   top: 28%;
   left: 25%;
   max-width: 50%;
 }
 
-.batch-scan-3 {
+.batch-scan-back {
   z-index: 2;
   top: 32%;
   left: 22%;
   max-width: 57%;
 }
 
-.export-pdf,
-.export-pdf2,
+.export-pdf-primary,
+.export-pdf-secondary,
 .export-txt,
 .export-jpg {
   z-index: 2;
@@ -91,13 +91,13 @@
   max-width: 27%;
 }
 
-.export-pdf {
+.export-pdf-primary {
   bottom: 4%;
   left: 11%;
   width: 4%;
 }
 
-.export-pdf2 {
+.export-pdf-secondary {
   left: 9%;
 }
 
@@ -126,21 +126,21 @@
     right: 5%;
   }
 
-  .batch-scan-1 {
+  .batch-scan-front {
     z-index: 2;
     top: 25%;
     left: 30%;
     max-width: 41%;
   }
 
-  .batch-scan-2 {
+  .batch-scan-middle {
     z-index: 2;
     top: 26%;
     left: 27%;
     max-width: 47%;
   }
 
-  .batch-scan-3 {
+  .batch-scan-back {
     z-index: 2;
     top: 29%;
     left: 25%;
@@ -155,12 +155,12 @@
     right: 16%;
   }
 
-  .export-pdf {
+  .export-pdf-primary {
     bottom: 6%;
     left: 15%;
   }
 
-  .export-pdf2 {
+  .export-pdf-secondary {
     left: 14%;
   }
 

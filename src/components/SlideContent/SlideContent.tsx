@@ -1,3 +1,4 @@
+import { DEFAULT_BUTTON_TEXT } from '../../constants';
 import styles from './SlideContent.module.css';
 
 interface SlideContentProps {
@@ -13,7 +14,7 @@ export function SlideContent({
   title,
   description,
   buttonLink,
-  buttonText = 'Learn More',
+  buttonText = DEFAULT_BUTTON_TEXT,
 }: SlideContentProps) {
   return (
     <div

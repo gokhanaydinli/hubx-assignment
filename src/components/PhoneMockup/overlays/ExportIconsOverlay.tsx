@@ -31,12 +31,12 @@ export function ExportIconsOverlay({
           style={gpuAcceleration}
           src={slideData.exportPdfPrimary}
           alt=""
-          className={`absolute ${styles['export-pdf']}`}
+          className={`absolute ${styles['export-pdf-primary']}`}
         />
       )}
       {slideData.exportPdfSecondary && (
         <motion.img
-          key={`export-pdf2-${animationKey}`}
+          key={`export-pdf-secondary-${animationKey}`}
           initial={{ y: 200, x: 120 }}
           animate={{ y: 0, x: 0 }}
           transition={{
@@ -47,7 +47,7 @@ export function ExportIconsOverlay({
           style={gpuAcceleration}
           src={slideData.exportPdfSecondary}
           alt=""
-          className={`absolute ${styles['export-pdf2']}`}
+          className={`absolute ${styles['export-pdf-secondary']}`}
         />
       )}
       {slideData.exportJpg && (

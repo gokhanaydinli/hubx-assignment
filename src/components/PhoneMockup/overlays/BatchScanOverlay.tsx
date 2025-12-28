@@ -31,7 +31,7 @@ export function BatchScanOverlay({
           style={gpuAcceleration}
           src={slideData.batchScanFront}
           alt=""
-          className={`absolute ${styles['batch-scan-1']}`}
+          className={`absolute ${styles['batch-scan-front']}`}
         />
       )}
       {slideData.batchScanMiddle && (
@@ -47,7 +47,7 @@ export function BatchScanOverlay({
           style={gpuAcceleration}
           src={slideData.batchScanMiddle}
           alt=""
-          className={`absolute ${styles['batch-scan-2']}`}
+          className={`absolute ${styles['batch-scan-middle']}`}
         />
       )}
       {slideData.batchScanBack && (
@@ -63,7 +63,7 @@ export function BatchScanOverlay({
           style={gpuAcceleration}
           src={slideData.batchScanBack}
           alt=""
-          className={`absolute ${styles['batch-scan-3']}`}
+          className={`absolute ${styles['batch-scan-back']}`}
         />
       )}
     </>
