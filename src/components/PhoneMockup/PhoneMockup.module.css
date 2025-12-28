@@ -147,9 +147,25 @@
     max-width: 61%;
   }
 
+  .left-bar {
+    left: 16%;
+  }
+
+  .right-bar {
+    right: 16%;
+  }
+
   .export-pdf {
     bottom: 4%;
     left: 13%;
+  }
+
+  .export-pdf2 {
+    left: 14%;
+  }
+
+  .export-txt {
+    left: 59%;
   }
 
   .export-jpg {
