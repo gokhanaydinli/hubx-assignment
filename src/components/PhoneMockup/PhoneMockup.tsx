@@ -7,6 +7,11 @@ interface PhoneMockupProps {
   animationKey: string | number;
 }
 
+const gpuAcceleration = {
+  willChange: 'transform',
+  transform: 'translateZ(0)',
+};
+
 export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
   return (
     <div className={`flex-center ${styles['phone-wrapper']}`}>
@@ -31,6 +36,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.4, 0, 0.2, 1],
             delay: 1.4,
           }}
+          style={gpuAcceleration}
           src={slideData.leftBarImage}
           alt=""
           className={`absolute ${styles['left-bar']}`}
@@ -46,6 +52,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.4, 0, 0.2, 1],
             delay: 1.6,
           }}
+          style={gpuAcceleration}
           src={slideData.rightBarImage}
           alt=""
           className={`absolute ${styles['right-bar']}`}
@@ -61,6 +68,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.34, 1.56, 0.64, 1],
             delay: 1.4,
           }}
+          style={gpuAcceleration}
           src={slideData.signatureStampImage}
           alt=""
           className={`absolute ${styles['signature-stamp']}`}
@@ -76,6 +84,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.34, 1.56, 0.64, 1],
             delay: 1.8,
           }}
+          style={gpuAcceleration}
           src={slideData.completedImage}
           alt=""
           className={`absolute ${styles['completed-image']}`}
@@ -91,6 +100,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.16, 1, 0.3, 1],
             delay: 1.4,
           }}
+          style={gpuAcceleration}
           src={slideData.batchImage1}
           alt=""
           className={`absolute ${styles['batch-scan-1']}`}
@@ -106,6 +116,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.16, 1, 0.3, 1],
             delay: 2.0,
           }}
+          style={gpuAcceleration}
           src={slideData.batchImage2}
           alt=""
           className={`absolute ${styles['batch-scan-2']}`}
@@ -121,6 +132,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.16, 1, 0.3, 1],
             delay: 2.6,
           }}
+          style={gpuAcceleration}
           src={slideData.batchImage3}
           alt=""
           className={`absolute ${styles['batch-scan-3']}`}
@@ -136,6 +148,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.22, 1, 0.36, 1],
             delay: 1.4,
           }}
+          style={gpuAcceleration}
           src={slideData.exportPdfIcon}
           alt=""
           className={`absolute ${styles['export-pdf']}`}
@@ -151,6 +164,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.22, 1, 0.36, 1],
             delay: 1.8,
           }}
+          style={gpuAcceleration}
           src={slideData.exportPdf2Icon}
           alt=""
           className={`absolute ${styles['export-pdf2']}`}
@@ -166,6 +180,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.22, 1, 0.36, 1],
             delay: 2,
           }}
+          style={gpuAcceleration}
           src={slideData.exportJpgIcon}
           alt=""
           className={`absolute ${styles['export-jpg']}`}
@@ -181,6 +196,7 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
             ease: [0.22, 1, 0.36, 1],
             delay: 2.2,
           }}
+          style={gpuAcceleration}
           src={slideData.exportTxtIcon}
           alt=""
           className={`absolute ${styles['export-txt']}`}
