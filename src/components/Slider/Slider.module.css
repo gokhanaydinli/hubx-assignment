@@ -96,7 +96,7 @@
 
     aspect-ratio: unset;
     min-height: 485px;
-    padding-left: 64px;
+    padding-left: 0;
   }
 
   .phone-wrapper {

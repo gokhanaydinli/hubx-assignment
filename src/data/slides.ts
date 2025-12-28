@@ -1,5 +1,5 @@
 import { SlideData } from '../types';
-import { SLIDE_COUNT } from '../constants';
+import { SLIDE_COUNT, DEFAULT_BUTTON_LINK, DEFAULT_BUTTON_TEXT } from '../constants';
 import * as icons from '../assets/icons';
 import * as images from '../assets/images';
 
@@ -13,8 +13,8 @@ const rawSlides = [
     phoneImageDesktop: images.phoneDocumentScannerDesktop,
     tabIcon: icons.documentScannerIcon,
     tabLabel: 'Document Scanner',
-    buttonLink: 'https://hubx.co/',
-    buttonText: 'Learn More',
+    buttonLink: DEFAULT_BUTTON_LINK,
+    buttonText: DEFAULT_BUTTON_TEXT,
   },
   {
     badge: 'SIGN & STAMP',
@@ -27,8 +27,8 @@ const rawSlides = [
     completedImage: images.completedImage,
     tabIcon: icons.signStampIcon,
     tabLabel: 'Sign & Stamp',
-    buttonLink: 'https://hubx.co/',
-    buttonText: 'Learn More',
+    buttonLink: DEFAULT_BUTTON_LINK,
+    buttonText: DEFAULT_BUTTON_TEXT,
   },
   {
     badge: 'BATCH SCANNING',
@@ -42,8 +42,8 @@ const rawSlides = [
     batchImage3: images.batchScan3,
     tabIcon: icons.batchScanningIcon,
     tabLabel: 'Batch Scanning',
-    buttonLink: 'https://hubx.co/',
-    buttonText: 'Learn More',
+    buttonLink: DEFAULT_BUTTON_LINK,
+    buttonText: DEFAULT_BUTTON_TEXT,
   },
   {
     badge: 'ADVANCED FILTERS',
@@ -56,8 +56,8 @@ const rawSlides = [
     rightBarImage: images.rightBar,
     tabIcon: icons.advancedFiltersIcon,
     tabLabel: 'Advanced Filters',
-    buttonLink: 'https://hubx.co/',
-    buttonText: 'Learn More',
+    buttonLink: DEFAULT_BUTTON_LINK,
+    buttonText: DEFAULT_BUTTON_TEXT,
   },
   {
     badge: 'EXPORT & SHARE',
@@ -71,8 +71,8 @@ const rawSlides = [
     exportJpgIcon: icons.exportJpgIcon,
     tabIcon: icons.exportShareIcon,
     tabLabel: 'Export & Share',
-    buttonLink: 'https://hubx.co/',
-    buttonText: 'Learn More',
+    buttonLink: DEFAULT_BUTTON_LINK,
+    buttonText: DEFAULT_BUTTON_TEXT,
   },
 ];
 
