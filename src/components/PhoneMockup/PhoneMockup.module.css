@@ -1,9 +1,12 @@
 .phone-wrapper {
   position: relative;
+
   overflow: visible;
-  line-height: var(--line-height-none);
+
   max-width: 400px;
   margin: 0 auto;
+
+  line-height: var(--line-height-none);
 }
 
 .left-bar,
