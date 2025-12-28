@@ -142,4 +142,9 @@
     bottom: 4%;
     left: 13%;
   }
+
+  .export-jpg {
+    left: 38%;
+    max-width: 21%;
+  }
 }
