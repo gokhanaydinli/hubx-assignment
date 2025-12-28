@@ -3,7 +3,7 @@
 
   overflow: visible;
 
-  max-width: 400px;
+  max-width: 375px;
   margin: 0 auto;
 
   line-height: var(--line-height-none);
@@ -21,11 +21,11 @@
 }
 
 .left-bar {
-  left: 15%;
+  left: 13%;
 }
 
 .right-bar {
-  right: 15%;
+  right: 13%;
 }
 
 .signature-stamp {
@@ -59,7 +59,7 @@
 
 .batch-scan-1 {
   z-index: 2;
-  top: 26%;
+  top: 27%;
   left: 30%;
   max-width: 41%;
 }
@@ -73,9 +73,9 @@
 
 .batch-scan-3 {
   z-index: 2;
-  top: 33%;
+  top: 32%;
   left: 22%;
-  max-width: 56%;
+  max-width: 57%;
 }
 
 .export-pdf,
@@ -88,27 +88,27 @@
   display: block;
 
   width: auto;
-  max-width: 23%;
+  max-width: 27%;
 }
 
 .export-pdf {
   bottom: 4%;
-  left: 13%;
+  left: 11%;
   width: 4%;
 }
 
 .export-pdf2 {
-  left: 15%;
+  left: 9%;
 }
 
 .export-txt {
-  left: 61%;
+  left: 63%;
 }
 
 .export-jpg {
   bottom: 8%;
-  left: 37%;
-  max-width: 23%;
+  left: 35%;
+  max-width: 26%;
 }
 
 @media (width >= 1024px) {
