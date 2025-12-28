@@ -28,10 +28,14 @@ export function Slider() {
   const currentSlide = slidesData[activeIndex];
 
   return (
-    <section className={`overflow-hidden flex flex-col justify-center ${styles.section}`}>
+    <section
+      className={`overflow-hidden flex flex-col justify-center ${styles.section}`}
+    >
       <div className={`relative flex flex-col w-full ${styles.container}`}>
         <div className={`flex justify-center w-full ${styles['slide-inner']}`}>
-          <div className={`flex flex-col w-full ${styles['slide-content-area']}`}>
+          <div
+            className={`flex flex-col w-full ${styles['slide-content-area']}`}
+          >
             <motion.div
               key={`content-${activeIndex}`}
               initial={{ opacity: 0 }}
@@ -44,11 +48,15 @@ export function Slider() {
                 title={currentSlide.title}
                 description={currentSlide.description}
                 buttonLink={currentSlide.buttonLink}
-                {...(currentSlide.buttonText && { buttonText: currentSlide.buttonText })}
+                {...(currentSlide.buttonText && {
+                  buttonText: currentSlide.buttonText,
+                })}
               />
             </motion.div>
 
-            <div className={`relative overflow-hidden ${styles['phone-container']}`}>
+            <div
+              className={`relative overflow-hidden ${styles['phone-container']}`}
+            >
               <motion.div
                 key={`phone-${activeIndex}`}
                 initial={{ opacity: 0, y: '100%' }}

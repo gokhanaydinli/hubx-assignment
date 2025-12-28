@@ -1,5 +1,9 @@
 import { SlideData } from '../types';
-import { SLIDE_COUNT, DEFAULT_BUTTON_LINK, DEFAULT_BUTTON_TEXT } from '../constants';
+import {
+  SLIDE_COUNT,
+  DEFAULT_BUTTON_LINK,
+  DEFAULT_BUTTON_TEXT,
+} from '../constants';
 import * as icons from '../assets/icons';
 import * as images from '../assets/images';
 

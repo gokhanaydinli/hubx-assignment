@@ -7,14 +7,14 @@ interface PhoneMockupProps {
   animationKey: string | number;
 }
 
-export function PhoneMockup({
-  slideData,
-  animationKey,
-}: PhoneMockupProps) {
+export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
   return (
     <div className={`flex-center ${styles['phone-wrapper']}`}>
       <picture>
-        <source media="(min-width: 1024px)" srcSet={slideData.phoneImageDesktop} />
+        <source
+          media="(min-width: 1024px)"
+          srcSet={slideData.phoneImageDesktop}
+        />
         <img
           src={slideData.phoneImageMobile}
           alt={slideData.title}
@@ -164,7 +164,7 @@ export function PhoneMockup({
           transition={{
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
-            delay: 2
+            delay: 2,
           }}
           src={slideData.exportJpgIcon}
           alt=""
@@ -179,7 +179,7 @@ export function PhoneMockup({
           transition={{
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
-            delay: 2.2
+            delay: 2.2,
           }}
           src={slideData.exportTxtIcon}
           alt=""

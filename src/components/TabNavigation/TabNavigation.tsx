@@ -21,7 +21,7 @@ export function TabNavigation({
   const [tabSwiper, setTabSwiper] = useState<SwiperType | null>(null);
 
   useEffect(() => {
-    if (tabSwiper) {
+    if (tabSwiper && window.innerWidth < 1024) {
       tabSwiper.slideTo(activeIndex);
     }
   }, [activeIndex, tabSwiper]);
@@ -40,10 +40,16 @@ export function TabNavigation({
               onClick={() => onTabClick(index)}
             >
               <div className={`relative ${styles['icon-wrapper']}`}>
-                <svg className={`absolute ${styles['icon-circle-bg']}`} viewBox="0 0 56 56">
+                <svg
+                  className={`absolute ${styles['icon-circle-bg']}`}
+                  viewBox="0 0 56 56"
+                >
                   <circle cx="28" cy="28" r="27" />
                 </svg>
-                <svg className={`absolute ${styles['icon-circle']}`} viewBox="0 0 56 56">
+                <svg
+                  className={`absolute ${styles['icon-circle']}`}
+                  viewBox="0 0 56 56"
+                >
                   <circle cx="28" cy="28" r="27" />
                 </svg>
                 <img
@@ -52,7 +58,9 @@ export function TabNavigation({
                   className={`absolute ${styles['tab-icon']}`}
                 />
               </div>
-              <span className={`text-lg font-medium ${styles['tab-label']}`}>{slide.tabLabel}</span>
+              <span className={`text-lg font-medium ${styles['tab-label']}`}>
+                {slide.tabLabel}
+              </span>
             </button>
           </SwiperSlide>
         ))}
