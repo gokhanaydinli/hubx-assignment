@@ -26,7 +26,7 @@ export function ExportIconsOverlay({
           transition={{
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
-            delay: 1.4,
+            delay: 0.4,
           }}
           style={gpuAcceleration}
           src={slideData.exportPdfIcon}
@@ -42,7 +42,7 @@ export function ExportIconsOverlay({
           transition={{
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
-            delay: 1.8,
+            delay: 0.8,
           }}
           style={gpuAcceleration}
           src={slideData.exportPdf2Icon}
@@ -58,7 +58,7 @@ export function ExportIconsOverlay({
           transition={{
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
-            delay: 2,
+            delay: 1.0,
           }}
           style={gpuAcceleration}
           src={slideData.exportJpgIcon}
@@ -74,7 +74,7 @@ export function ExportIconsOverlay({
           transition={{
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
-            delay: 2.2,
+            delay: 1.2,
           }}
           style={gpuAcceleration}
           src={slideData.exportTxtIcon}

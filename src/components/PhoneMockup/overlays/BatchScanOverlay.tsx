@@ -26,7 +26,7 @@ export function BatchScanOverlay({
           transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
-            delay: 1.4,
+            delay: 0.4,
           }}
           style={gpuAcceleration}
           src={slideData.batchImage1}
@@ -42,7 +42,7 @@ export function BatchScanOverlay({
           transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
-            delay: 2.0,
+            delay: 1.0,
           }}
           style={gpuAcceleration}
           src={slideData.batchImage2}
@@ -58,7 +58,7 @@ export function BatchScanOverlay({
           transition={{
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
-            delay: 2.6,
+            delay: 1.6,
           }}
           style={gpuAcceleration}
           src={slideData.batchImage3}

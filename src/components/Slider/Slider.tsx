@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import type { Swiper as SwiperType } from 'swiper';
 
 import { SlideContent } from '../SlideContent';
@@ -36,43 +36,48 @@ export function Slider() {
           <div
             className={`flex flex-col w-full ${styles['slide-content-area']}`}
           >
-            <motion.div
-              key={`content-${activeIndex}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
-              className={`flex-center ${styles['content-wrapper']}`}
-            >
-              <SlideContent
-                badge={currentSlide.badge}
-                title={currentSlide.title}
-                description={currentSlide.description}
-                buttonLink={currentSlide.buttonLink}
-                {...(currentSlide.buttonText && {
-                  buttonText: currentSlide.buttonText,
-                })}
-              />
-            </motion.div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`content-${activeIndex}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                className={`flex-center ${styles['content-wrapper']}`}
+              >
+                <SlideContent
+                  badge={currentSlide.badge}
+                  title={currentSlide.title}
+                  description={currentSlide.description}
+                  buttonLink={currentSlide.buttonLink}
+                  {...(currentSlide.buttonText && {
+                    buttonText: currentSlide.buttonText,
+                  })}
+                />
+              </motion.div>
+            </AnimatePresence>
 
             <div
               className={`relative overflow-hidden ${styles['phone-container']}`}
             >
-              <motion.div
-                key={`phone-${activeIndex}`}
-                initial={{ opacity: 0, y: '100%' }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1.2,
-                  ease: [0.4, 0, 0.2, 1],
-                  delay: 0.8,
-                }}
-                className={`absolute w-full ${styles['phone-wrapper']}`}
-              >
-                <PhoneMockup
-                  slideData={currentSlide}
-                  animationKey={activeIndex}
-                />
-              </motion.div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`phone-${activeIndex}`}
+                  initial={{ opacity: 0, y: '100%' }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: [0.4, 0, 0.2, 1],
+                  }}
+                  className={`absolute w-full ${styles['phone-wrapper']}`}
+                >
+                  <PhoneMockup
+                    slideData={currentSlide}
+                    animationKey={activeIndex}
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ export function SignatureOverlay({
           transition={{
             duration: 0.6,
             ease: [0.34, 1.56, 0.64, 1],
-            delay: 1.4,
+            delay: 0.4,
           }}
           style={gpuAcceleration}
           src={slideData.signatureStampImage}
@@ -42,7 +42,7 @@ export function SignatureOverlay({
           transition={{
             duration: 0.6,
             ease: [0.34, 1.56, 0.64, 1],
-            delay: 1.8,
+            delay: 0.8,
           }}
           style={gpuAcceleration}
           src={slideData.completedImage}
