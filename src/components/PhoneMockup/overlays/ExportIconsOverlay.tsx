@@ -5,16 +5,11 @@ import styles from '../PhoneMockup.module.css';
 interface ExportIconsOverlayProps {
   slideData: SlideData;
   animationKey: string | number;
-  gpuAcceleration: {
-    willChange: string;
-    transform: string;
-  };
 }
 
 export function ExportIconsOverlay({
   slideData,
   animationKey,
-  gpuAcceleration,
 }: ExportIconsOverlayProps) {
   return (
     <>
@@ -28,7 +23,6 @@ export function ExportIconsOverlay({
             ease: [0.22, 1, 0.36, 1],
             delay: 0.4,
           }}
-          style={gpuAcceleration}
           src={slideData.exportPdfPrimary}
           alt=""
           className={`absolute ${styles['export-pdf-primary']}`}
@@ -44,7 +38,6 @@ export function ExportIconsOverlay({
             ease: [0.22, 1, 0.36, 1],
             delay: 0.8,
           }}
-          style={gpuAcceleration}
           src={slideData.exportPdfSecondary}
           alt=""
           className={`absolute ${styles['export-pdf-secondary']}`}
@@ -60,7 +53,6 @@ export function ExportIconsOverlay({
             ease: [0.22, 1, 0.36, 1],
             delay: 1.0,
           }}
-          style={gpuAcceleration}
           src={slideData.exportJpg}
           alt=""
           className={`absolute ${styles['export-jpg']}`}
@@ -76,7 +68,6 @@ export function ExportIconsOverlay({
             ease: [0.22, 1, 0.36, 1],
             delay: 1.2,
           }}
-          style={gpuAcceleration}
           src={slideData.exportTxt}
           alt=""
           className={`absolute ${styles['export-txt']}`}

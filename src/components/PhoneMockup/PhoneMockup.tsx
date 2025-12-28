@@ -12,11 +12,6 @@ interface PhoneMockupProps {
   animationKey: string | number;
 }
 
-const gpuAcceleration = {
-  willChange: 'transform',
-  transform: 'translateZ(0)',
-};
-
 export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
   return (
     <div className={`flex-center ${styles['phone-wrapper']}`}>
@@ -34,22 +29,18 @@ export function PhoneMockup({ slideData, animationKey }: PhoneMockupProps) {
       <AdvancedFiltersOverlay
         slideData={slideData}
         animationKey={animationKey}
-        gpuAcceleration={gpuAcceleration}
       />
       <SignatureOverlay
         slideData={slideData}
         animationKey={animationKey}
-        gpuAcceleration={gpuAcceleration}
       />
       <BatchScanOverlay
         slideData={slideData}
         animationKey={animationKey}
-        gpuAcceleration={gpuAcceleration}
       />
       <ExportIconsOverlay
         slideData={slideData}
         animationKey={animationKey}
-        gpuAcceleration={gpuAcceleration}
       />
     </div>
   );

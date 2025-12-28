@@ -5,16 +5,11 @@ import styles from '../PhoneMockup.module.css';
 interface SignatureOverlayProps {
   slideData: SlideData;
   animationKey: string | number;
-  gpuAcceleration: {
-    willChange: string;
-    transform: string;
-  };
 }
 
 export function SignatureOverlay({
   slideData,
   animationKey,
-  gpuAcceleration,
 }: SignatureOverlayProps) {
   return (
     <>
@@ -28,7 +23,6 @@ export function SignatureOverlay({
             ease: [0.34, 1.56, 0.64, 1],
             delay: 0.4,
           }}
-          style={gpuAcceleration}
           src={slideData.signatureStamp}
           alt=""
           className={`absolute ${styles['signature-stamp']}`}
@@ -44,7 +38,6 @@ export function SignatureOverlay({
             ease: [0.34, 1.56, 0.64, 1],
             delay: 0.8,
           }}
-          style={gpuAcceleration}
           src={slideData.signatureCompleted}
           alt=""
           className={`absolute ${styles['completed-image']}`}

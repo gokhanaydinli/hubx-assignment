@@ -5,16 +5,11 @@ import styles from '../PhoneMockup.module.css';
 interface BatchScanOverlayProps {
   slideData: SlideData;
   animationKey: string | number;
-  gpuAcceleration: {
-    willChange: string;
-    transform: string;
-  };
 }
 
 export function BatchScanOverlay({
   slideData,
   animationKey,
-  gpuAcceleration,
 }: BatchScanOverlayProps) {
   return (
     <>
@@ -28,7 +23,6 @@ export function BatchScanOverlay({
             ease: [0.16, 1, 0.3, 1],
             delay: 0.4,
           }}
-          style={gpuAcceleration}
           src={slideData.batchScanFront}
           alt=""
           className={`absolute ${styles['batch-scan-front']}`}
@@ -44,7 +38,6 @@ export function BatchScanOverlay({
             ease: [0.16, 1, 0.3, 1],
             delay: 0.7,
           }}
-          style={gpuAcceleration}
           src={slideData.batchScanMiddle}
           alt=""
           className={`absolute ${styles['batch-scan-middle']}`}
@@ -60,7 +53,6 @@ export function BatchScanOverlay({
             ease: [0.16, 1, 0.3, 1],
             delay: 1,
           }}
-          style={gpuAcceleration}
           src={slideData.batchScanBack}
           alt=""
           className={`absolute ${styles['batch-scan-back']}`}

@@ -5,16 +5,11 @@ import styles from '../PhoneMockup.module.css';
 interface AdvancedFiltersOverlayProps {
   slideData: SlideData;
   animationKey: string | number;
-  gpuAcceleration: {
-    willChange: string;
-    transform: string;
-  };
 }
 
 export function AdvancedFiltersOverlay({
   slideData,
   animationKey,
-  gpuAcceleration,
 }: AdvancedFiltersOverlayProps) {
   return (
     <>
@@ -28,7 +23,6 @@ export function AdvancedFiltersOverlay({
             ease: [0.4, 0, 0.2, 1],
             delay: 0.4,
           }}
-          style={gpuAcceleration}
           src={slideData.advancedFiltersLeftBar}
           alt=""
           className={`absolute ${styles['left-bar']}`}
@@ -44,7 +38,6 @@ export function AdvancedFiltersOverlay({
             ease: [0.4, 0, 0.2, 1],
             delay: 0.6,
           }}
-          style={gpuAcceleration}
           src={slideData.advancedFiltersRightBar}
           alt=""
           className={`absolute ${styles['right-bar']}`}
