@@ -52,7 +52,7 @@
   .section {
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-4);
+    padding:0;
   }
 
   .container {

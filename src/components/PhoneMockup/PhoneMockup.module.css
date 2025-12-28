@@ -107,6 +107,16 @@
 }
 
 @media (width >= 1024px) {
+  .signature-stamp {
+    bottom: 18%;
+    left: 3%;
+  }
+
+  .completed-image {
+    top: 32%;
+    right: 5%;
+  }
+
   .batch-scan-1 {
     z-index: 2;
     top: 25%;
@@ -116,16 +126,16 @@
 
   .batch-scan-2 {
     z-index: 2;
-    top: 27%;
-    left: 26%;
-    max-width: 49%;
+    top: 26%;
+    left: 27%;
+    max-width: 47%;
   }
 
   .batch-scan-3 {
     z-index: 2;
-    top: 31%;
-    left: 24%;
-    max-width: 60%;
+    top: 29%;
+    left: 25%;
+    max-width: 61%;
   }
 
   .export-pdf {

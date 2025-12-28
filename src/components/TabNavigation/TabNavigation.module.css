@@ -115,6 +115,14 @@
 }
 
 @media (width >= 1024px) {
+  .tab-slide {
+    width: 20% !important;
+  }
+
+  .tab-item {
+    width: 100%;
+  }
+
   .tab-item:not(.active):hover {
     box-shadow:
       inset 0 0 0 3px var(--color-primary),
